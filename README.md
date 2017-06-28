@@ -19,6 +19,8 @@ device, so that you get to see all the great native features Ionic provides!
  locally
 1. Edit src/app/app.config.ts and replace `baseUrl` with your JSON API URL (ex:
  http://localhost:8888/api)
+1. Ensure that the latest Node 6 LTS and NPM 3+ are installed
+1. Run `npm install -g ionic@latest`
 1. Run `npm install`
 1. Run `ionic serve -p 1234` where "1234" is an unused port
 1. You're done!
