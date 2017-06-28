@@ -9,6 +9,10 @@ writing code at a high level and never making http calls directly.
 It's highly recommended that you use this example application on a mobile
 device, so that you get to see all the great native features Ionic provides!
 
+# Quick preview
+
+![Contenta Ionic demo screenshot](/screenshots/contenta_ionic.gif?raw=true "Contenta Ionic demo screenshot")
+
 # Installation
 
 1. Install [contenta_jsonapi](https://github.com/contentacms/contenta_jsonapi)
