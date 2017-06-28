@@ -18,4 +18,8 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" [hidden]="allRecipesLoaded && this.recipes.length">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
