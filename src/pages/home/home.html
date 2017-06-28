@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Umami Magazine</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 *ngFor="let recipe of recipes">
+        <ion-card (click)="clickRecipe(recipe)">
+          <img src="{{ recipe.image.name }}">
+          <ion-card-content>
+            <p>Difficulty: {{ recipe.difficulty }}</p>
+            <h2>{{ recipe.title }}</h2>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

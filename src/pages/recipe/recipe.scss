@@ -1,0 +1,15 @@
+page-recipe {
+  .recipe-ingredients, .recipe-ingredients .item-md {
+    background: map-get($colors, bg);
+  }
+  h2 {
+    text-align: center;
+    font-weight: normal;
+  }
+  .recipe-instructions h3 {
+    vertical-align: middle;
+    float: left;
+    margin-right: 2rem;
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ recipe.title }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-md-6>
+        <img src="{{ recipe.image.name }}" >
+      </ion-col>
+      <ion-col col-12 col-md-6>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="timer" item-start></ion-icon>
+            Preparation time
+            <div item-end>{{ recipe.preparationTime }} minutes</div>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="time" item-start></ion-icon>
+            Total time
+            <div item-end>{{ recipe.totalTime }} minutes</div>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="people" item-start></ion-icon>
+            Serves
+            <div item-end>{{ recipe.numberOfServices || 1 }}</div>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="speedometer" item-start></ion-icon>
+            Difficulty
+            <div item-end>{{ recipe.difficulty }}</div>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row padding>
+      <ion-col>
+        <h2>What you'll need and how to make this dish</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 col-md-6 class="recipe-ingredients" padding>
+        <h2>Ingredients for this recipe</h2>
+        <ion-list text-wrap>
+          <ion-item *ngFor="let ingredient of recipe.ingredients">
+            {{ ingredient }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col col-12 col-md-6 padding>
+        <h2>Method</h2>
+        <ion-list text-wrap class="recipe-instructions">
+          <!-- @todo This field should be an array, need to fix in Drupal -->
+          <ion-item *ngFor="let instruction of recipe.instructions.split(','); let i = index">
+            <h3>{{ i+1 }}</h3> {{ instruction }}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
