@@ -13,6 +13,10 @@
         <img src="{{ recipe.image.name }}" >
       </ion-col>
       <ion-col col-12 col-md-6>
+        <ion-badge>{{ recipe.category.name }}</ion-badge>
+        <ion-badge *ngFor="let tag of recipe.tags" color="secondary">
+          {{ tag.name }}
+        </ion-badge>
         <ion-list>
           <ion-item>
             <ion-icon name="timer" item-start></ion-icon>
