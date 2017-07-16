@@ -32,7 +32,8 @@ export class HomePage {
   loadRecipes() {
     let query = this.datastore.query(Recipe, {
       page: { limit: this.limit, offset: this.offset },
-      include: 'image,category,tags'
+      // @todo Remove image.field_image when JSON API bug is fixed.
+      include: 'image,category,tags,image.field_image,image.imageFile'
     });
     query.subscribe(
       (recipes: Recipe[]) => {
