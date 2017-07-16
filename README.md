@@ -2,9 +2,8 @@
 
 An example Ionic Framework demo using Contenta CMS as a backend.
 
-This project also uses [angular2-jsonapi](https://github.com/ghidoz/angular2-jsonapi),
-modeling each of the relevant resources as models in src/models/. This enables
-writing code at a high level and never making http calls directly.
+This project also uses [contenta-angular-service](https://github.com/contentacms/contenta_angular_service),
+This enables writing code at a high level and never making http calls directly.
 
 It's highly recommended that you use this example application on a mobile
 device, so that you get to see all the great native features Ionic provides!

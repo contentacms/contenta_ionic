@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {  NavParams } from 'ionic-angular';
 
-import { Recipe } from '../../models/recipe.model';
+import { Recipe } from 'contenta-angular-service';
 
 @Component({
   selector: 'page-recipe',

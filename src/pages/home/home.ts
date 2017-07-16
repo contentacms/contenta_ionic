@@ -2,14 +2,20 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import _ from 'lodash';
 
-import { Datastore } from '../../services/datastore.service';
-import { Recipe } from '../../models/recipe.model';
+import { Recipe } from 'contenta-angular-service';
+import { ContentaDatastore } from 'contenta-angular-service';
+import { BASE_URL } from 'contenta-angular-service';
+
 import { RecipePage } from '../recipe/recipe';
+import { config } from '../../app/app.config';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [Datastore]
+  providers: [
+    ContentaDatastore,
+    { provide: BASE_URL, useValue: config.baseUrl }
+  ]
 })
 export class HomePage {
 
@@ -21,7 +27,7 @@ export class HomePage {
 
   private allRecipesLoaded: boolean = false;
 
-  constructor(private navCtrl: NavController, private datastore: Datastore, private alertCtrl: AlertController) {}
+  constructor(private navCtrl: NavController, private datastore: ContentaDatastore, private alertCtrl: AlertController) {}
 
   loadRecipes() {
     let query = this.datastore.query(Recipe, {

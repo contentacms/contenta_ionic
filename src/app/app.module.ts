@@ -12,7 +12,7 @@ import { RecipePage } from '../pages/recipe/recipe';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { JsonApiModule } from 'angular2-jsonapi';
+import { ContentaServiceModule } from 'contenta-angular-service';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { JsonApiModule } from 'angular2-jsonapi';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    JsonApiModule
+    ContentaServiceModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
