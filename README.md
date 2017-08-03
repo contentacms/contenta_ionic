@@ -17,7 +17,7 @@ device, so that you get to see all the great native features Ionic provides!
 1. Install [contenta_jsonapi](https://github.com/contentacms/contenta_jsonapi)
  locally
 1. Edit src/app/app.config.ts and replace `baseUrl` with your JSON API URL (ex:
- http://localhost:8888/api)
+ http://localhost:8888/api). Remember the trailing slash!
 1. Ensure that the latest Node 6 LTS and NPM 3+ are installed
 1. Run `sudo npm install -g ionic@latest`
 1. Run `npm install`
